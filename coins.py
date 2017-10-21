@@ -1,51 +1,76 @@
 import random
-
+ 
 class Coin:
     def __init__(self, rare=False, clean=True, heads=True, **kwargs):
-
+ 
         for key,value in kwargs.items():
             setattr(self,key,value)
-
-        self.rare = rare
-        #check if error is present for self.clean instead of self.is_clean
-        self.clean = clean
-        #Check if error comes if self.heads is present
+ 
+        self.is_rare = rare
+        self.is_clean = clean
         self.heads = heads
-
-        if self.rare:
+ 
+        if self.is_rare:
             self.value = self.original_value * 1.25
         else:
             self.value = self.original_value
-
-#check if error for is clean
-        if self.clean:
-            self.color = clean_color
+ 
+        if self.is_clean:
+            self.colour = self.clean_colour
         else:
-            self.color = rusty_color
-
+            self.colour = self.rusty_colour
+ 
     def rust(self):
-        self.color = self.rusty_color
-
+        self.colour = self.rusty_colour
+ 
     def clean(self):
-        self.color = self.clean_color
-
+        self.colour = self.clean_colour
+ 
     def __del__(self):
         print("Coin Spent!")
-
+ 
     def flip(self):
-        heads_options = [True, False]
+        options = [True, False]
         choice = random.choice(heads_options)
         self.heads = choice
 
+
+class One_pence(Coin):
+    def __init__(self):
+        data = {
+        "original_value": 0.01,
+        "clean_colour": "bronze",
+        "rusty_colour": "brownish",
+        "num_edges": 1,
+        "diameter": 20.3,
+        "thickness": 1.52,
+        "mass": 3.56,
+        }
+        super().__init__(**data)
+
+
+class Two_pence(Coin):
+    def __init__(self):
+        data = {
+        "original_value": 0.02,
+        "clean_colour": "bronze",
+        "rusty_colour": "brownish",
+        "num_edges": 1,
+        "diameter": 25.9,
+        "thickness": 1.85,
+        "mass": 7.12,
+        }
+        super().__init__(**data)
+        
 class Pound(Coin):
     def __init__(self):
         data = {
-            "original_value": 1.00,
-            "clean_color": "gold",
-            "rusty_color": "greenish",
-            "num_edges": 1,
-            "diameter": 22.5,
-            "thickness": 3.15,
-            "mass": 9.5,
+        "original_value": 1.00,
+        "clean_colour": "gold",
+        "rusty_colour": "greenish",
+        "num_edges": 1,
+        "diameter": 22.5,
+        "thickness": 3.15,
+        "mass": 9.5,
         }
         super().__init__(**data)
