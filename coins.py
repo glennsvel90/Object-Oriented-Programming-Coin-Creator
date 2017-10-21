@@ -6,8 +6,8 @@ class Coin:
 
     Attributes:
         original_value (int): The value of the coin
-        clean_colour (str): The colour of the coin when it is clean(not rusted)
-        rusty_colour (str): The colour of the coin when it has been rusted
+        clean_color (str): The color of the coin when it is clean(not rusted)
+        rusty_color (str): The color of the coin when it has been rusted
         num_edges (int): The number of edges the coin has
         diameter (int): The diameter in millimeters of the coin
         thickness (int): The thickness in millimeters of the coin
@@ -37,15 +37,15 @@ class Coin:
             self.value = self.original_value
 
         if self.is_clean:
-            self.colour = self.clean_colour
+            self.color = self.clean_color
         else:
-            self.colour = self.rusty_colour
+            self.color = self.rusty_color
 
     def rust(self):
-        self.colour = self.rusty_colour
+        self.color = self.rusty_color
 
     def clean(self):
-        self.colour = self.clean_colour
+        self.color = self.clean_color
 
     def flip(self):
         options = [True, False]
@@ -64,8 +64,8 @@ class One_Pence(Coin):
     def __init__(self):
         data = {
         "original_value": 0.01,
-        "clean_colour": "bronze",
-        "rusty_colour": "brownish",
+        "clean_color": "bronze",
+        "rusty_color": "brownish",
         "num_edges": 1,
         "diameter": 20.3,
         "thickness": 1.52,
@@ -79,8 +79,8 @@ class Two_Pence(Coin):
     def __init__(self):
         data = {
         "original_value": 0.02,
-        "clean_colour": "bronze",
-        "rusty_colour": "brownish",
+        "clean_color": "bronze",
+        "rusty_color": "brownish",
         "num_edges": 1,
         "diameter": 25.9,
         "thickness": 1.85,
@@ -94,8 +94,8 @@ class Five_Pence(Coin):
     def __init__(self):
         data = {
         "original_value": 0.05,
-        "clean_colour": "silver",
-        "rusty_colour": None,
+        "clean_color": "silver",
+        "rusty_color": None,
         "num_edges": 1,
         "diameter": 18.0,
         "thickness": 1.77,
@@ -104,7 +104,7 @@ class Five_Pence(Coin):
         super().__init__(**data)
 
     def rust():
-        self.colour = self.clean_colour
+        self.color = self.clean_color
 
 
 class Ten_Pence(Coin):
@@ -112,8 +112,8 @@ class Ten_Pence(Coin):
     def __init__(self):
         data = {
         "original_value": 0.10,
-        "clean_colour": "silver",
-        "rusty_colour": None,
+        "clean_color": "silver",
+        "rusty_color": None,
         "num_edges": 1,
         "diameter": 24.5,
         "thickness": 1.85,
@@ -122,7 +122,7 @@ class Ten_Pence(Coin):
         super().__init__(**data)
 
     def rust():
-        self.colour = self.clean_colour
+        self.color = self.clean_color
 
 
 class Twenty_Pence(Coin):
@@ -130,8 +130,8 @@ class Twenty_Pence(Coin):
     def __init__(self):
         data = {
         "original_value": 0.20,
-        "clean_colour": "silver",
-        "rusty_colour": None,
+        "clean_color": "silver",
+        "rusty_color": None,
         "num_edges": 7,
         "diameter": 21.4,
         "thickness": 1.7,
@@ -140,7 +140,7 @@ class Twenty_Pence(Coin):
         super().__init__(**data)
 
     def rust():
-        self.colour = self.clean_colour
+        self.color = self.clean_color
 
 
 class Fifty_Pence(Coin):
@@ -148,8 +148,8 @@ class Fifty_Pence(Coin):
     def __init__(self):
         data = {
         "original_value": 0.50,
-        "clean_colour": "silver",
-        "rusty_colour": None,
+        "clean_color": "silver",
+        "rusty_color": None,
         "num_edges": 7,
         "diameter": 27.3,
         "thickness": 1.78,
@@ -158,7 +158,7 @@ class Fifty_Pence(Coin):
         super().__init__(**data)
 
     def rust():
-        self.colour = self.clean_colour
+        self.color = self.clean_color
 
 
 class One_Pound(Coin):
@@ -166,8 +166,8 @@ class One_Pound(Coin):
     def __init__(self):
         data = {
         "original_value": 1.00,
-        "clean_colour": "gold",
-        "rusty_colour": "greenish",
+        "clean_color": "gold",
+        "rusty_color": "greenish",
         "num_edges": 1,
         "diameter": 22.5,
         "thickness": 3.15,
@@ -181,8 +181,8 @@ class Two_Pound(Coin):
     def __init__(self):
         data = {
         "original_value": 2.00,
-        "clean_colour": "gold & silver",
-        "rusty_colour": "greenish",
+        "clean_color": "gold & silver",
+        "rusty_color": "greenish",
         "num_edges": 1,
         "diameter": 28.4,
         "thickness": 2.50,
@@ -195,16 +195,17 @@ coins = [One_Pence(), Two_Pence(), Five_Pence(), Ten_Pence(), Twenty_Pence(),
          Fifty_Pence(), One_Pound(), Two_Pound()]
 
 for coin in coins:
-    arguments = [coin, coin.colour, coin.value, coin.diameter, coin.thickness,
+    arguments = [coin, coin.color, coin.value, coin.diameter, coin.thickness,
                  coin.num_edges, coin.mass]
 
-    string = "\n Created {} - Colour: {}, Value: £{}, Diameter(mm): {}, Thickness(mm): {}, Number of Edges: {}, Mass(g): {} ".format(*arguments)
+    string = "\n Created {} - color: {}, Value: £{}, Diameter(mm): {}, Thickness(mm): {}, Number of Edges: {}, Mass(g): {} ".format(*arguments)
 
     print(string)
 
-Print("Explore the docstring for the Coin class to understand it's features\n",
+print("\n \nExplore the docstring for the Coin class to understand it's features\n",
+      "To do so type: help(Coin)\n"
     "You may create an instance of a £1 coin and then flip th coin with the flip() function to change it's head up state\n",
       "To create an instance of a £1 coin, type into the terminal while in python interactive mode: one_pound_coin = One_Pound()\n",
       "Then flip the coin by typing: one_pound_coin.flip()\n",
       "You may rust the coin by typing: one_pound_coin.rust()\n",
-      "You many clean the coin by typing: one_pound_coin.clean()"
+      "You many clean the coin by typing: one_pound_coin.clean()")
