@@ -1,7 +1,11 @@
 import random
 
 class Coin:
-    def __init__(self, rare=False, clean=True, heads=True):
+    def __init__(self, rare=False, clean=True, heads=True, **kwargs):
+
+        for key,value in kwargs.items():
+            setattr(self,key,value)
+
         self.rare = rare
         #check if error is present for self.clean instead of self.is_clean
         self.clean = clean
@@ -35,4 +39,13 @@ class Coin:
 
 class Pound(Coin):
     def __init__(self):
-        data = {''}
+        data = {
+            "original_value": 1.00,
+            "clean_color": "gold",
+            "rusty_color": "greenish",
+            "num_edges": 1,
+            "diameter": 22.5,
+            "thickness": 3.15,
+            "mass": 9.5,
+        }
+        super().__init__(**data)
