@@ -131,7 +131,7 @@ class Fifty_Pence(Coin):
         self.colour = self.clean_colour
 
 
-class Pound(Coin):
+class One_Pound(Coin):
     def __init__(self):
         data = {
         "original_value": 1.00,
@@ -160,4 +160,12 @@ class Two_Pound(Coin):
 
 
 coins = [One_Pence(), Two_Pence(), Five_Pence(), Ten_Pence(), Twenty_Pence(),
-         Fifty_Pence
+         Fifty_Pence(), One_Pound(), Two_Pound()]
+
+for coin in coins:
+    arguments = [coin, coin.colour, coin.value, coin.diameter, coin.thickness,
+                 coin.num_edges, coin.mass]
+
+    string = "{} - Colour:{}, Value:{}, Diameter(mm):{}, Thickness(mm):{}, Number of Edges:{}, Mass(g):{}".format(*arguments)
+
+    print(string)
