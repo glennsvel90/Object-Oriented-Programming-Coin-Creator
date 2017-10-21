@@ -2,7 +2,7 @@ import random
 
 
 class Coin:
-    """Class to represent a Coin
+    """Class to represent a Coin.
 
     Attributes:
         original_value (int): The value of the coin

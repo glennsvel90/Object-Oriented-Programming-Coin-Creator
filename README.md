@@ -13,3 +13,6 @@ In the terminal, change to the directory where the coins.py file is located
 
 Type:
 python3 coins.py
+
+
+Note:
