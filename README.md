@@ -7,7 +7,7 @@ Coins can be rusted, cleaned, and flipped. Descriptions of each coin is provided
 
 ### Prerequisites
 
-*Python 3
+ * Python 3
 
 In the terminal, change to directory where the coins.py file is located in then type to run the script:
 
