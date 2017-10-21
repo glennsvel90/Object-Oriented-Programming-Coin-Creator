@@ -202,7 +202,9 @@ for coin in coins:
 
     print(string)
 
-Print("Explore the docstring for the Coin class to understand it's features"
-    "You may create an instance of a £1 coin and then flip th coin with the flip() function to change it's head up state",
-      "To create an instance of a £1 coin, type into the terminal while in python interactive mode: one_pound_coin = One_Pound()",
-      "Then flip the coin by typing: one_pound_coin.flip()",
+Print("Explore the docstring for the Coin class to understand it's features\n",
+    "You may create an instance of a £1 coin and then flip th coin with the flip() function to change it's head up state\n",
+      "To create an instance of a £1 coin, type into the terminal while in python interactive mode: one_pound_coin = One_Pound()\n",
+      "Then flip the coin by typing: one_pound_coin.flip()\n",
+      "You may rust the coin by typing: one_pound_coin.rust()\n",
+      "You many clean the coin by typing: one_pound_coin.clean()"
