@@ -1,6 +1,25 @@
 import random
 
+
 class Coin:
+    """Class to represent a Coin
+
+    Attributes:
+        original_value (int): The value of the coin
+        clean_colour (str): The colour of the coin when it is clean(not rusted)
+        rusty_colour (str): The colour of the coin when it has been rusted
+        num_edges (int): The number of edges the coin has
+        diameter (int): The diameter in millimeters of the coin
+        thickness (int): The thickness in millimeters of the coin
+        mass (int): The mass in grams of the coin
+        heads (boolean): Whether the coin is face up heads or not
+        is_rare
+
+    Methods:
+        rust: Used to rust a coin
+        clean: Used to clean a coin
+        flip: Used to flip a coin
+
     def __init__(self, rare=False, clean=True, heads=True, **kwargs):
 
         for key,value in kwargs.items():
@@ -26,13 +45,16 @@ class Coin:
     def clean(self):
         self.colour = self.clean_colour
 
-    def __del__(self):
-        print("Coin Spent!")
-
     def flip(self):
         options = [True, False]
         choice = random.choice(heads_options)
         self.heads = choice
+
+    def __str__(self):
+        if self.original_value >= 1:
+            return "£{} Coin".format(int(self.original_value))
+        else:
+            return "{}p Coin".format(int(self.original_value*100))
 
 
 class One_Pence(Coin):
@@ -166,6 +188,10 @@ for coin in coins:
     arguments = [coin, coin.colour, coin.value, coin.diameter, coin.thickness,
                  coin.num_edges, coin.mass]
 
-    string = "{} - Colour:{}, Value:{}, Diameter(mm):{}, Thickness(mm):{}, Number of Edges:{}, Mass(g):{}".format(*arguments)
+    string = "\n Created {} - Colour: {}, Value: £{}, Diameter(mm): {}, Thickness(mm): {}, Number of Edges: {}, Mass(g): {} ".format(*arguments)
 
     print(string)
+
+Print("You may create an instance of the a £1 coin and then flip th coin with the flip() function",
+      "To create an instance of a £1 coin, type into the terminal while in python interactive mode: one_pound_coin = One_Pound()",
+      "Then flip the coin by typing: one_pound_coin.flip()",
