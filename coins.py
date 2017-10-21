@@ -13,12 +13,14 @@ class Coin:
         thickness (int): The thickness in millimeters of the coin
         mass (int): The mass in grams of the coin
         heads (boolean): Whether the coin is face up heads or not
-        is_rare
+        is_rare (boolean): Whether the coin is rare or not
+        is_clean (boolean): Whether the coin is clean. If the coin is not clean, it is rusted
 
     Methods:
-        rust: Used to rust a coin
-        clean: Used to clean a coin
-        flip: Used to flip a coin
+        rust: Used to rust a coin. This method is not available for silver coins, since silver coins do not rust
+        clean: Used to clean a coin and not make it be rusted anymore
+        flip: Used to flip a coin and change it's face up heads state
+    """
 
     def __init__(self, rare=False, clean=True, heads=True, **kwargs):
 
@@ -58,6 +60,7 @@ class Coin:
 
 
 class One_Pence(Coin):
+    """ Class to representa one pence coin """
     def __init__(self):
         data = {
         "original_value": 0.01,
@@ -72,6 +75,7 @@ class One_Pence(Coin):
 
 
 class Two_Pence(Coin):
+    """ Class to representa two pence coin """
     def __init__(self):
         data = {
         "original_value": 0.02,
@@ -86,6 +90,7 @@ class Two_Pence(Coin):
 
 
 class Five_Pence(Coin):
+    """ Class to representa five pence coin """
     def __init__(self):
         data = {
         "original_value": 0.05,
@@ -103,6 +108,7 @@ class Five_Pence(Coin):
 
 
 class Ten_Pence(Coin):
+    """ Class to representa ten pence coin """
     def __init__(self):
         data = {
         "original_value": 0.10,
@@ -120,6 +126,7 @@ class Ten_Pence(Coin):
 
 
 class Twenty_Pence(Coin):
+    """ Class to representa twenty pence coin """
     def __init__(self):
         data = {
         "original_value": 0.20,
@@ -137,6 +144,7 @@ class Twenty_Pence(Coin):
 
 
 class Fifty_Pence(Coin):
+    """ Class to representa fifty pence coin """
     def __init__(self):
         data = {
         "original_value": 0.50,
@@ -154,6 +162,7 @@ class Fifty_Pence(Coin):
 
 
 class One_Pound(Coin):
+    """ Class to representa one pound coin """
     def __init__(self):
         data = {
         "original_value": 1.00,
@@ -168,6 +177,7 @@ class One_Pound(Coin):
 
 
 class Two_Pound(Coin):
+    """ Class to representa two pound coin """
     def __init__(self):
         data = {
         "original_value": 2.00,
@@ -192,6 +202,7 @@ for coin in coins:
 
     print(string)
 
-Print("You may create an instance of the a £1 coin and then flip th coin with the flip() function",
+Print("Explore the docstring for the Coin class to understand it's features"
+    "You may create an instance of a £1 coin and then flip th coin with the flip() function to change it's head up state",
       "To create an instance of a £1 coin, type into the terminal while in python interactive mode: one_pound_coin = One_Pound()",
       "Then flip the coin by typing: one_pound_coin.flip()",
