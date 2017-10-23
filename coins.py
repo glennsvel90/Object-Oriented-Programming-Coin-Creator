@@ -202,12 +202,12 @@ for coin in coins:
 
     print(string)
 
-print("""\
-    Explore the docstring for the Coin class to understand it's features",
-    To do so type: help(Coin)
-    You may create an instance of a £1 coin and then flip th coin with the flip() function to change it's head up state
-    To create an instance of a £1 coin, type into the terminal while in python interactive mode: one_pound_coin = One_Pound()
-    Then flip the coin by typing: one_pound_coin.flip()
-    You may rust the coin by typing: one_pound_coin.rust()
-    You many clean the coin by typing: one_pound_coin.clean())
-    """
+print("""
+Explore the docstring for the Coin class to understand it's features.
+To do so type: help(Coin)
+You may create an instance of a £1 coin and then flip th coin with the flip() function to change it's head up state
+To create an instance of a £1 coin, type into the terminal while in python interactive mode: one_pound_coin = One_Pound()
+Then flip the coin by typing: one_pound_coin.flip()
+You may rust the coin by typing: one_pound_coin.rust()
+You many clean the coin by typing: one_pound_coin.clean())
+""")
