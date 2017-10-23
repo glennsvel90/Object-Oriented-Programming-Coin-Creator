@@ -1,4 +1,6 @@
 import random
+import humanize
+
 
 
 class Coin:
@@ -54,9 +56,14 @@ class Coin:
 
     def __str__(self):
         if self.original_value >= 1:
-            return "£{} Coin".format(int(self.original_value))
+            ap = str(humanize.apnumber(int(self.original_value)))
+            cap = ap.capitalize()
+
+            return "{} Pound Coin".format(cap)
         else:
-            return "{}p Coin".format(int(self.original_value*100))
+            ap = humanize.apnumber(int(self.original_value*100))
+            cap = ap.capitalize()
+            return "{} Pence Coin".format(cap)
 
 
 class One_Pence(Coin):
@@ -198,7 +205,8 @@ for coin in coins:
     arguments = [coin, coin.color, coin.value, coin.diameter, coin.thickness,
                  coin.num_edges, coin.mass]
 
-    string = "\n Created {} - color: {}, Value: £{}, Diameter(mm): {}, Thickness(mm): {}, Number of Edges: {}, Mass(g): {} ".format(*arguments)
+    string = """Created a {} - color: {}, Value: £{}, Diameter(mm): {}, Thickness(mm): {}, Number of Edges: {}, Mass(g): {}
+    """.format(*arguments)
 
     print(string)
 
