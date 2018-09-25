@@ -19,5 +19,11 @@ pip install humanize
  In the terminal, change to the directory where the coins.py file is located in, then type to run the script:
 
 ```
-python coins.py
+python 
+```
+```
+import coins
+```
+```
+help(coins.Coin)
 ```
