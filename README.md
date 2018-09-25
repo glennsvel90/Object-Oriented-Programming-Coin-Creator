@@ -14,9 +14,9 @@ Coins can be rusted, cleaned, and flipped. Descriptions of each coin is provided
 pip install humanize
 ```
 
-### Running the program
+### Using the program
  
- In the terminal, change to the directory where the coins.py file is located in, then type to run the script:
+ In the terminal, change to the directory where the coins.py file is located in, then type:
 
 ```
 python 
