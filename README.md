@@ -16,7 +16,7 @@ pip install humanize
 
 ### Running the program
  
- In the terminal, change to directory where the coins.py file is located in then type to run the script:
+ In the terminal, change to the directory where the coins.py file is located in, then type to run the script:
 
 ```
 python coins.py
