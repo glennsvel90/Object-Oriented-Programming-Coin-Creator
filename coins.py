@@ -218,4 +218,6 @@ To create an instance of a £1 coin, type into the terminal while in python inte
 Then flip the coin by typing: one_pound_coin.flip()
 You may rust the coin by typing: one_pound_coin.rust()
 You many clean the coin by typing: one_pound_coin.clean())
+
+To see what other coin classes are available, type in the terminal while in python interactive mode: help(coins)
 """)
