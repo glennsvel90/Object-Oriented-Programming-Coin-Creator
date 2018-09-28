@@ -44,12 +44,15 @@ class Coin:
             self.color = self.rusty_color
 
     def rust(self):
+        """ This wil rust the coin """
         self.color = self.rusty_color
 
     def clean(self):
+        """ This will clean the coin """
         self.color = self.clean_color
 
     def flip(self):
+        """ This will change the head state of the coin to either heads or tails """
         options = [True, False]
         choice = random.choice(heads_options)
         self.heads = choice
